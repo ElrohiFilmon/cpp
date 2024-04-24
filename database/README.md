@@ -1,4 +1,4 @@
-# DataBase system Documentation
+# Student Record Managment Documentation
 
 ## Overview
 Small class project using C++ for a student record managment system.
