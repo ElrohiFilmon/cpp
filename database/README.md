@@ -27,7 +27,7 @@ Execute the compiled program:
 2. **Struct Initialization**
     - A struct datatype having members name, age, gender and batch .
 
-3. **Read Function**
+3. **Write Function**
     - Takes alias value n for the length of the array.
     - Asks for the amount of records.  
     - Initializes a dynamic structure array.
@@ -45,8 +45,8 @@ Execute the compiled program:
 
 5. **Main Function**
     - Initializes an integer value n for size to pass it.
-    - Call the functions read and display
-    - Pass n as an argument for call and display functions
+    - Call the functions write and display
+    - Pass n as an argument for write and display functions
 
 
 ## Limitations and Possible Improvements

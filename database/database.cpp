@@ -7,7 +7,7 @@ struct student{
     char gender;
     string batch;
 };
-void read(int &n){
+void write(int &n){
     cout<<"How many records do you want to enter"<<endl;
     cin>>n;
     student *s = new student[n];
@@ -29,7 +29,7 @@ void read(int &n){
 
 void display(const int n){
     cout<<" 1:Name"<<"  2:Age"<< " 3:gender(M/F)"<<" 4:Batch"<<endl; 
-    student *a; 
+    student *a= new student[n]; 
     fstream ofile;
     ofile.open("student_data.dat", ios::binary);
     if(ofile){ 
@@ -43,6 +43,6 @@ void display(const int n){
 
 int main(){
     int n;
-    read(n);
+    write(n);
     display(n);
 }
