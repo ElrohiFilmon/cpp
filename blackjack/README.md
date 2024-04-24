@@ -110,8 +110,8 @@ Common issues and their solutions:
 - Adding a graphical user interface for a more engaging experience.
 
 ## Contributors
-1.Betelhem Worku
-2.Elrohi Filmon
-3.Dagmawi Asfaw
-4.Lozan Getnet 
-5.Meti Abera 
+- 1.Betelhem Worku
+- 2.Elrohi Filmon
+- 3.Dagmawi Asfaw
+- 4.Lozan Getnet 
+- 5.Meti Abera 
