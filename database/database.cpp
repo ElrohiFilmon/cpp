@@ -13,15 +13,17 @@ void read(int &n){
     student *s = new student[n];
     fstream ifile;  
     ifile.open("student_data.dat", ios::binary);
-    cout<<"----Enter your records----"<<endl<<"Notice: Fill them respectivly!"<<endl<<"1:Name"<<endl<<"2:Age"<<endl<<"3:gender(M/F)"<<endl<<"4:Batch"<<endl;
-    for(int i =0,j=1;i<n;++i,++j){
-        cout<<"Record"<<j<<endl;
-        cin>>s[i].name;
-        cin>>s[i].age;
-        cin>>s[i].gender;
-        cin>>s[i].batch;
-        ifile.write((char*)&s[i], sizeof(student));
-    } 
+    if(ifile){
+        cout<<"----Enter your records----"<<endl<<"Notice: Fill them respectivly!"<<endl<<"1:Name"<<endl<<"2:Age"<<endl<<"3:gender(M/F)"<<endl<<"4:Batch"<<endl;
+        for(int i =0,j=1;i<n;++i,++j){
+            cout<<"Record"<<j<<endl;
+            cin>>s[i].name;
+            cin>>s[i].age;
+            cin>>s[i].gender;
+            cin>>s[i].batch;
+            ifile.write((char*)&s[i], sizeof(student));
+        } 
+    }
     ifile.close();
 }
 
@@ -30,17 +32,17 @@ void display(const int n){
     student *a; 
     fstream ofile;
     ofile.open("student_data.dat", ios::binary);
-   
-    for(int i =0,j=1;i<n;++i,++j){        
-        ofile.read((char*)&a[i],sizeof (student));
-        cout<<" "<<a[i].name<<"    "<<a[i].age<<"    "<<a[i].gender<<"             "<<a[i].batch<<endl;
+    if(ofile){ 
+        for(int i =0,j=1;i<n;++i,++j){        
+            ofile.read((char*)&a[i],sizeof (student));
+            cout<<" "<<a[i].name<<"    "<<a[i].age<<"    "<<a[i].gender<<"             "<<a[i].batch<<endl;
+        }
     }
     ofile.close();
 }
 
 int main(){
     int n;
-    student a; 
     read(n);
     display(n);
 }
