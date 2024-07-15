@@ -1,7 +1,7 @@
-# Student Record Managment Documentation
+# Employee Record Managment Documentation
 
 ## Overview
-Small class project using C++ for a student record managment system.
+Class project using C++ for a employee record managment system.
 
 ## System Requirements
 - C++ compiler (e.g., g++, clang)
